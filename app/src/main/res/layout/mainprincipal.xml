@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/pretocinza"
+    android:layout_margin="10dp"
+
+    >
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cálculo do IMC"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textPeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Informe o Peso"
+        android:padding="10dp"
+        android:textColorHint="@color/purple_200"
+        android:inputType="number"
+        android:layout_marginTop="20dp"
+        />
+    <EditText
+        android:id="@+id/textAltura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/purple_200"
+        android:padding="10dp"
+        android:hint="Informe a altura"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Calcular IMC"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:textSize="15dp"
+        android:layout_gravity="center"
+        android:id="@+id/btCalcular"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btLimpar"
+        android:layout_width="100dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Limpar"
+        android:onClick="LimparCampos"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="210dp"
+        android:layout_marginTop="30dp"
+        android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="188dp"
+                android:layout_height="match_parent"
+                android:text="IMC"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:text="CLASSIFICAÇÂO"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+
+        <TableRow>
+            <TextView
+            android:layout_width="188dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="30dp"
+            android:textAlignment="center"
+                android:background="#ffff00"
+                android:textSize="15sp"
+            android:text="Menor que 18,5" />
+            <TextView
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="#ffff00"
+                android:layout_height="30dp"
+            android:text="Abaixo do Peso"/>
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="188dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:background="#00ff00"
+                android:textStyle="bold"
+                android:text="18,5 até 24,9"/>
+
+            <TextView
+
+                android:background="#00ff00"
+                android:text="Peso Normal"
+                android:layout_height="30dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="188dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_height="30dp"
+                android:text="25,0 até 29,9"
+                android:background="#fc0fc0"
+                android:textStyle="bold"
+                android:textAlignment="center" />
+            <TextView
+                android:background="#fc0fc0"
+                android:layout_height="30dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:text="Sobre Peso"/>
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_width="188dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_height="30dp"
+                android:textColor="@color/black"
+                android:text="30,0 até 34,9"
+                android:background="#ffa500"
+                android:textAlignment="center" />
+            <TextView
+                android:background="#ffa500"
+                android:textColor="@color/black"
+                android:layout_height="30dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="Obsidade (Grau I)"/>
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="188dp"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_height="30dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:background="#cd5c5c"
+                android:text="35,0 até 39,9" />
+            <TextView
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:layout_height="30dp"
+                android:textStyle="bold"
+                android:background="#cd5c5c"
+                android:text="Obesidade Severa(Grau II)"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="188dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_height="30dp"
+                android:textAlignment="center"
+                android:text="Maior ou igual 40,0"
+                android:background="#ff0000"/>
+            <TextView
+                android:textAlignment="center"
+                android:layout_height="30dp"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="Obsidade Móbida"
+                android:background="#ff0000"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/resultadoImc"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:textColor="#db6f02"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:textAlignment="center"
+        android:textColorHint="#ff981a" />
+</LinearLayout>
+
