@@ -28,7 +28,7 @@
         android:hint="Informe o Peso"
         android:padding="10dp"
         android:textColorHint="@color/purple_200"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:layout_marginTop="20dp"
         />
     <EditText

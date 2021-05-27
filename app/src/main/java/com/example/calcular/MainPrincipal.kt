@@ -67,7 +67,8 @@ class MainPrincipal : AppCompatActivity() {
             } else "Obsidade Móbida"
 
             this.resultadoImc.text =
-                "Seu IMC é: ${"%.2f".format(imc)} \nSua classificação é de $mensagemIMC"
+                "Seu IMC é: ${"%.2f".format(imc)} \nSua classificação é $mensagemIMC"
+
         }
     }
 
@@ -80,6 +81,7 @@ class MainPrincipal : AppCompatActivity() {
             this.txtPeso.text.clear()
            this.txtAltura.text.clear()
             this.resultadoImc.text = ""
+
         }
     }
 }
